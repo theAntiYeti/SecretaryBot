@@ -7,6 +7,7 @@ class Bot
     @token = token
   end
 
+  #Creates a string to send the bot details in a pm to the requestor
   def message()
     return "\nYou have control of bot #{@id}\ncid: #{@cid}\ntoken: #{@token}"
   end

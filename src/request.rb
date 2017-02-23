@@ -14,7 +14,10 @@ module Request
   hire_bots = [Bot.new(1,283922122747936779,'MjgzOTIyMTIyNzQ3OTM2Nzc5.C4-gHg.466NhLjp6oCRlm9CeDOzpCInVl8'), Bot.new(2,283922690207645696,'MjgzOTIyNjkwMjA3NjQ1Njk2.C4-gPw.bkOMI1NOad5lyOryW0ggufwYhjQ')]
 
   bots_in_use = []
-  
+
+  #Request a bot for a time, takes one from the pool, assigns it and nicknames
+  #it, then sets a timer to undo this action in a thread and stores it in the
+  #use pool
   command :request do |event, time=DEFAULT_WAITTIME|
     if time.to_i > 30 or time.to_i < 1
       time = 30
@@ -49,7 +52,9 @@ module Request
     return
   end
 
-  command :relinquish do |event, id|
+  #given an id, searches the in use pool for the user id and then renames it,
+  #kills the thread and then moves the bot back into the request pool
+  command :relenquish do |event, id|
     for i in 0..(bots_in_use.length)
       if bots_in_use[i].id == id.to_i
         choice = bots_in_use.delete_at(i)
