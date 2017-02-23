@@ -1,0 +1,21 @@
+#Defaults for Request
+
+#Bot hire times
+default_wait: 10 #minutes
+min_wait: 1
+max_wait: 30
+#Add more bots as required
+bots:
+  -
+    id: 1
+    cid: 283922122747936779
+    token: 'MjgzOTIyMTIyNzQ3OTM2Nzc5.C4-gHg.466NhLjp6oCRlm9CeDOzpCInVl8'
+
+  -
+    id: 2
+    cid: 283922690207645696
+    token: 'MjgzOTIyNjkwMjA3NjQ1Njk2.C4-gPw.bkOMI1NOad5lyOryW0ggufwYhjQ'
+  -
+    id: 3
+    cid: 284347831563845643
+    token: 'Mjg0MzQ3ODMxNTYzODQ1NjQz.C5CTNA.70rRJRTI3Imejce9fVVxJslqiZI'

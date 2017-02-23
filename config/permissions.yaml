@@ -1,0 +1,11 @@
+#General folder for permission groups
+admins:
+  - 284022705496522753 #Server_host
+  - 284022811163361281 #Admin
+  - 284022982135906305 #Admin_bot
+
+requests:
+  - 284022705496522753 #Server_host
+  - 284022811163361281 #Admin
+  - 284022982135906305 #Admin_bot
+  - 284023107667099649 #Developer
